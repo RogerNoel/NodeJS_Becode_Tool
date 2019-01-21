@@ -1,0 +1,11 @@
+{
+  "name": "nodejs_nodecli_tool",
+  "version": "1.0.0",
+  "description": "outil pour vérifier si les comptes web liés à une adresse mail ont été compromis par des brêches de sécurité",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roger Noel",
+  "license": "ISC"
+}
