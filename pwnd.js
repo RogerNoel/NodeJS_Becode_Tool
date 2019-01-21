@@ -6,15 +6,22 @@
 /* - Packages : - isemail -> pour vérifier une adresse email
                 - axios -> pour effectuer des requêtes HTTP */
 
-var http = require('http');
 var axios = require('axios');
 var validator = require('email-validator');
 
+let valid = validator.validate('bebert@gmail.com');
+/* TODO traiter les différents cas */
 
-let server = http.createServer(function(){
-   let valid = validator.validate('bebert@gmail.com');
-   console.log(valid);
-    
-});
+/* GET https://haveibeenpwned.com/api/v2/breachedaccount/{account} */
 
-server.listen(8080);
+axios.get('https://haveibeenpwned.com/api/v2/breachedaccount/noel.roger.pro@gmail.com', {
+        headers: {
+            'User-Agent': 'pwnd-checker'
+        }
+    })
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
