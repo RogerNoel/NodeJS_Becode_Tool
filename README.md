@@ -1,4 +1,4 @@
-# ReadMe
+# Charlie Check Powned ReadMe
 
 ## What is it ?
 This Charlie Check Powned utility is an e-mail checker; it checks wether an e-mail address has been corrupted or not.  
@@ -19,7 +19,7 @@ When a valid e-mail adress is entered, a first message will appear:
 Followed short time after by the checking results:  
 - *This e-mail adress is safe.* -> for a clean e-mail adress;
 - *test@example.com has been powned on : gaadi.com* -> telling you on which domain the e-mail has been corrupted.  
-The server may sometimes be down, on may not respond for whaterver cause; in this case, the following message will be displayed:  
+The server may sometimes be down, or may not respond for whaterver cause; in this case, the following message will be displayed:  
 *A problem in the server has occured, please retry.*  
 
 ### Dependencies

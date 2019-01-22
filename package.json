@@ -1,5 +1,5 @@
 {
-  "name": "charlie-check-powned",
+  "name": "@taaaz1964/charlie-check-powned",
   "bin": {"charliecp": "/home/roger/Documents/repos/NodeJS_Becode_Tool/index.js"},
   "version": "1.0.0",
   "description": "outil pour vérifier si les comptes web liés à une adresse mail ont été compromis par des brêches de sécurité",
