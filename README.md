@@ -1,18 +1,19 @@
 # ReadMe
 
-## Warning !
-This is a an evolution of my roger_pwnd package.
-
 ## What is it ?
-This charliecheckpwnd utility is an e-mail checker; it checks wether an e-mail address has been corrupted or not.  
+This charlie Check Powned utility is an e-mail checker; it checks wether an e-mail address has been corrupted or not.  
 In affirmative case, it will display the domain name where the e-mail adress was corrupted.
 
 ## How to use it ?
+
+### Installation
+$ npm i charlie-check-powned
+
+### Usage
 Just type 'charliecp' (without curly quotes) followed by the e-mail adress to check, for example:  
 *charliecp youradress@whatever.com*  
 The module will first check the syntax validity of the e-mail adress, in case of invalid entry,  
-*This e-mail is not valid; please check syntax.*  
-will be displayed.  
+*This e-mail is not valid; please check syntax.* will be displayed.  
 When a valid e-mail adress is entered, a first message will appear:  
 *Valid e-mail -> waiting for server response*  
 Followed short time after by the checking results:  
@@ -21,7 +22,11 @@ Followed short time after by the checking results:
 The server may sometimes be down, on may not respond for whaterver cause; in this case, the following message will be displayed:  
 *A problem in the server has occured, please retry.*  
 
+### Dependencies
+[email-validator](https://www.npmjs.com/package/email-validator)  
+[axios](https://www.npmjs.com/package/axios)  
+
 ## Credit
-taaaz1964
+[The 'Have I Been Powned' API](https://haveibeenpwned.com/) for providing datas.
 Please report any problem you could find.  
 Thank you for downloading and sharing.
