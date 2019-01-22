@@ -34,8 +34,6 @@ axios.get(url, {
         headers: {
             'User-Agent': 'rupownd'
         }
-
-        
     })
     .then(function (response) {
         // console.log(response.data);
@@ -50,5 +48,4 @@ axios.get(url, {
         else {
             console.log('Une erreur s\'est produite, veuillez réessayer');
         }
-        // console.log(error.request.res.statusCode);
     });
