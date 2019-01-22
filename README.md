@@ -30,6 +30,6 @@ The server may sometimes be down, on may not respond for whaterver cause; in thi
 [The 'Have I Been Powned' API](https://haveibeenpwned.com/) for providing datas.  
 [Becode](https://www.becode.org/) -> for sharing knowledge.  
 Our beloved coaches ;-)  
-Those who helpes me achieve this (y)  
+Those who helped me achieve this (y)  
 Please report any problem you could find.  
-Thank you for downloading and sharing.
+Thank you for visiting this page.
