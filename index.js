@@ -6,3 +6,38 @@
 /* - Packages : - isemail -> pour vérifier une adresse email
                 - axios -> pour effectuer des requêtes HTTP */
 
+//#!/usr/bin/env node
+
+var axios = require('axios');
+var validator = require('email-validator');
+
+const {
+    NODE_ENV
+} = process.env;
+let [, , text] = process.argv;
+// test - > console.log(text);
+
+let valid = validator.validate(text);
+/* TODO traiter les différents cas */
+if (valid) {
+    console.log('ça roule');
+} else {
+    console.log('ça puwe')
+};
+
+var url = ('https://haveibeenpwned.com/api/v2/breachedaccount/' + text);
+// console.log(url);
+
+var retour = new Array ();
+
+axios.get(url, {
+        headers: {
+            'User-Agent': 'rupownd'
+        }
+    })
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
