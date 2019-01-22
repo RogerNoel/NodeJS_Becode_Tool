@@ -34,10 +34,21 @@ axios.get(url, {
         headers: {
             'User-Agent': 'rupownd'
         }
+
+        
     })
     .then(function (response) {
-        console.log(response);
+        // console.log(response.data);
+        response.data.forEach(element => {
+            console.log(element.Domain);
+        });
     })
     .catch(function (error) {
-        console.log(error);
+        if (error.request.res.statusCode == 404){
+            console.log('non powned');
+        }
+        else {
+            console.log('Une erreur s\'est produite, veuillez réessayer');
+        }
+        // console.log(error.request.res.statusCode);
     });
