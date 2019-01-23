@@ -6,8 +6,8 @@ In affirmative case, it will display the domain name(s) where the e-mail adress 
 
 ## How to use it ?
 
-### Installation
-$ npm i charlie-check-powned
+### Installation WARNING !!! Global installation required (-g).
+$ npm i -g charlie-check-powned
 
 ### Usage
 Just type 'charliecp' (without curly quotes) followed by the e-mail adress to check, for example:  

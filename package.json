@@ -1,7 +1,7 @@
 {
-  "name": "@taaaz1964/charlie-check-powned",
+  "name": "charlie-check-powned",
   "bin": {"charliecp": "./index.js"},
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "outil pour vérifier si les comptes web liés à une adresse mail ont été compromis par des brêches de sécurité",
   "main": "index.js",
   "scripts": {
