@@ -7,8 +7,6 @@ var validator = require('email-validator');
 const chalk = require('chalk');
 let log = console.log;
 
-const ora = require('ora');
-
 const {
     NODE_ENV
 } = process.env;
