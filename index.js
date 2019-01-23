@@ -3,7 +3,6 @@
 var axios = require('axios');
 
 var validator = require('email-validator');
-let valid = validator.validate(text);
 
 const chalk = require('chalk');
 let log = console.log;
@@ -15,6 +14,7 @@ const {
 } = process.env;
 let [, , text] = process.argv;
 
+let valid = validator.validate(text);
 
 log(chalk.yellow(chalk.underline.bgBlue('   Charlie welcomes you !   ') + '!'));
 
