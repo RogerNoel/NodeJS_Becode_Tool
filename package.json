@@ -1,13 +1,17 @@
 {
   "name": "@taaaz1964/charlie-check-powned",
-  "bin": {"charliecp": "/home/roger/Documents/repos/NodeJS_Becode_Tool/index.js"},
-  "version": "1.0.0",
+  "bin": {"charliecp": "./index.js"},
+  "version": "1.0.1",
   "description": "outil pour vérifier si les comptes web liés à une adresse mail ont été compromis par des brêches de sécurité",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Roger Noel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RogerNoel/NodeJS_Becode_Tool"
+  },
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
