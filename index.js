@@ -1,48 +1,45 @@
 #!/usr/bin/env node
+
 var axios = require('axios');
+
 var validator = require('email-validator');
+let valid = validator.validate(text);
+
 const chalk = require('chalk');
+let log = console.log;
+
 const ora = require('ora');
-const {NODE_ENV} = process.env;
+
+const {
+    NODE_ENV
+} = process.env;
 let [, , text] = process.argv;
 
 
-let valid = validator.validate(text);
-let log = console.log;
-
-log(chalk.yellow(chalk.underline.bgBlue.bold('Charlie welcomes you !') + '!'));
+log(chalk.yellow(chalk.underline.bgBlue('   Charlie welcomes you !   ') + '!'));
 
 if (valid) {
-        console.log('Valid e-mail -> waiting for server response.');
-    
+    console.log('Valid e-mail -> waiting for server response.');
+
     var url = ('https://haveibeenpwned.com/api/v2/breachedaccount/' + text);
-    
+
     axios.get(url, {
-        headers: {
-            'User-Agent': 'rupownd'
-        }
-    })
-    .then(function (response) {
-        response.data.forEach(element => {
-
-            log(chalk.red(chalk.bgWhite(text + ' has been powned on : ' + element.Domain)));
-
+            headers: {
+                'User-Agent': 'rupownd'
+            }
+        })
+        .then(function (response) {
+            response.data.forEach(element => {
+                log(chalk.red(chalk.bgWhite(text + ' has been powned on : ' + element.Domain)));
+            });
+        })
+        .catch(function (error) {
+            if (error.request.res.statusCode == 404) {
+                log(chalk.green(chalk.bgWhite.bold('     This e-mail adress is safe.     ')));
+            } else {
+                console.log('A problem in the server has occured, please retry.');
+            }
         });
-
-    })
-    .catch(function (error) {
-        if (error.request.res.statusCode == 404){
-            log(chalk.green(chalk.bgWhite.bold('This e-mail adress is safe.')));
-        }
-        else {
-            console.log('A problem in the server has occured, please retry.');
-        }
-    });
-} 
-
-else {
+} else {
     console.log('This e-mail is not valid; please check syntax.');
 };
-
-
-            
