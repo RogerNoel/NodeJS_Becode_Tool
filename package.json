@@ -1,6 +1,8 @@
 {
   "name": "charlie-check-powned",
-  "bin": {"charliecp": "./index.js"},
+  "bin": {
+    "charliecp": "./index.js"
+  },
   "version": "1.0.4",
   "description": "outil pour vérifier si les comptes web liés à une adresse mail ont été compromis par des brêches de sécurité",
   "main": "index.js",
@@ -15,7 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
-    "colors": "^1.3.3",
-    "email-validator": "^2.0.4"
+    "chalk": "^2.4.2",
+    "email-validator": "^2.0.4",
+    "ora": "^3.0.0"
   }
 }
